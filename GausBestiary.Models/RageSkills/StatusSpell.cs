@@ -3,13 +3,8 @@
 /// <summary>
 /// Stores a status-inflicting spell used by the Rage command.
 /// </summary>
-public class StatusSpell : IRageSkill
+public class StatusSpell : RageSkill
 {
-    /// <summary>
-    /// The name of the spell.
-    /// </summary>
-    public string Name { get; set; }
-
     /// <summary>
     /// The description of the spell.
     /// </summary>
@@ -34,4 +29,14 @@ public class StatusSpell : IRageSkill
     /// Is the spell unblockable?
     /// </summary>
     public bool IsUnblockable { get; set; }
+
+    public StatusSpell(RageSkill baseRage)
+    {
+        this.RageId = baseRage.RageId;
+        this.SnesName = baseRage.SnesName;
+        this.PlayStationName = baseRage.PlayStationName;
+        this.GbaName = baseRage.GbaName;
+        this.MobileName = baseRage.MobileName;
+        this.PixelRemasterName = baseRage.PixelRemasterName;
+    }
 }

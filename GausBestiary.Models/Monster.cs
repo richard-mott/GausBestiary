@@ -8,29 +8,69 @@ namespace GausBestiary.Models;
 public class Monster
 {
     /// <summary>
-    /// The Bestiary Id for the monster.
+    /// The internal Id for the monster.
     /// </summary>
     public int Id { get; set; }
 
     /// <summary>
-    /// The default name of the monster.
+    /// The Bestiary Id for the SNES version of the monster.
     /// </summary>
-    public string Name { get; set; }
+    public int SnesId { get; set; }
+
+    /// <summary>
+    /// The Bestiary Id for the PlayStation version of the monster.
+    /// </summary>
+    public int PlayStationId { get; set; }
+
+    /// <summary>
+    /// The Bestiary Id for the GBA version of the monster.
+    /// </summary>
+    public int GbaId { get; set; }
+
+    /// <summary>
+    /// The Bestiary Id for the iOS/Android/PC version of the monster.
+    /// </summary>
+    public int MobileId { get; set; }
+
+    /// <summary>
+    /// The Bestiary Id for the Pixel Remaster version of the monster.
+    /// </summary>
+    public int PixelRemasterId { get; set; }
 
     /// <summary>
     /// The name of the monster in the SNES version of the game.
     /// </summary>
-    public string SNESName { get; set; }
+    public string SnesName { get; set; }
+
+    /// <summary>
+    /// The name of the monster in the PlayStation version of the game.
+    /// </summary>
+    public string PlayStationName { get; set; }
+
+    /// <summary>
+    /// The name of the monster in the GBA version of the game.
+    /// </summary>
+    public string GbaName { get; set; }
+
+    /// <summary>
+    /// The name of the monster in the iOS/Android/PC version of the game.
+    /// </summary>
+    public string MobileName { get; set; }
+
+    /// <summary>
+    /// The name of the monster in the Pixel Remaster version of the game.
+    /// </summary>
+    public string PixelRemasterName { get; set; }
 
     /// <summary>
     /// A list of locations where the monster appears.
     /// </summary>
-    public List<string> Locations { get; set; }
+    public List<Location> Locations { get; set; }
 
     /// <summary>
     /// The type of the monster.
     /// </summary>
-    public string Type { get; set; }
+    public MonsterType Type { get; set; }
 
     /// <summary>
     /// The file name for the monster's sprite.

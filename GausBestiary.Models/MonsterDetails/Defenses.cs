@@ -33,7 +33,7 @@ public class Defenses
     /// <summary>
     /// Combined flag for inherent status effects, if any. <see cref="Status"/>
     /// </summary>
-    public Status StatusInherent { get; set; }
+    public Status InherentStatus { get; set; }
 
     /// <summary>
     /// Any other immunities the monster may possess.
