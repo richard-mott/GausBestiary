@@ -16,14 +16,23 @@ public class Sketch
     public Chance Chance { get; set; }
 
     /// <summary>
-    /// 
+    /// Creates a Sketch ability.
+    /// </summary>
+    /// <param name="ability">The name of the ability.</param>
+    /// <param name="chance">The chance the ability will be used.</param>
+    public Sketch(string ability, Chance chance)
+    {
+        Ability = ability;
+        Chance = chance;
+    }
+
+    /// <summary>
+    /// Creates a Sketch ability.
     /// </summary>
     /// <param name="ability">The name of the ability.</param>
     /// <param name="success">The number of times out of <paramref name="maxChance"/> the <paramref name="ability"/> is used.</param>
     /// <param name="maxChance">The maximum possible number of outcomes.</param>
-    public Sketch(string ability, int success, int maxChance)
+    public Sketch(string ability, int success, int maxChance) : this(ability, new Chance(success, maxChance))
     {
-        Ability = ability;
-        Chance = new Chance(success, maxChance);
     }
 }

@@ -19,11 +19,20 @@ public class Item
     /// Creates an Item.
     /// </summary>
     /// <param name="name">The name of the item.</param>
-    /// <param name="success">The number of times out of <paramref name="maxChance"/> the item is received.</param>
-    /// <param name="maxChance">The maximum possible number of outcomes.</param>
-    public Item(string name, int success, int maxChance)
+    /// <param name="chance">The Chance of getting the item.</param>
+    public Item(string name, Chance chance)
     {
         Name = name;
-        Chance = new Chance(success, maxChance);
+        Chance = chance;
+    }
+
+    /// <summary>
+    /// Creates an Item.
+    /// </summary>
+    /// <param name="name">The name of the item.</param>
+    /// <param name="success">The number of times out of <paramref name="maxChance"/> the item is received.</param>
+    /// <param name="maxChance">The maximum possible number of outcomes.</param>
+    public Item(string name, int success, int maxChance) : this(name, new Chance(success, maxChance))
+    {
     }
 }

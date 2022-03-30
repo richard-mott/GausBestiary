@@ -23,25 +23,11 @@ namespace GausBestiary.AvaloniaApp.Views
             var provider = new RegexDataProvider();
             var monsters = provider.GetMonsters().ToList();
 
-            var distinctWorlds = monsters
-                .SelectMany(monster => monster.Locations
-                    .Select(location => location.World))
+            var sketches = monsters
+                .SelectMany(monster => monster.Skills.Sketch
+                    .Select(sketch => $"{sketch.Ability} {sketch.Chance.Text}"))
                 .Distinct()
-                .OrderBy(x => x)
-                .ToList();
-            
-            var distinctPrimary = monsters
-                .SelectMany(monster => monster.Locations
-                    .Select(location => location.PrimaryLocation))
-                .Distinct()
-                .OrderBy(x => x)
-                .ToList();
-            
-            var distinctSecondary = monsters
-                .SelectMany(monster => monster.Locations
-                    .SelectMany(location => location.SecondaryLocations))
-                .Distinct()
-                .OrderBy(x => x)
+                .OrderBy(sketch => sketch)
                 .ToList();
         }
     }
