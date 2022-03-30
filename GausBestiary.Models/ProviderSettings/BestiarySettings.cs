@@ -51,6 +51,11 @@ internal static class BestiarySettings
         @"(?<PrimaryLocation>.*?)" +
         @"(?:\s\((?<SecondaryLocation>.*?)\))*$";
 
+    internal static string ChanceEventRegexPattern =
+        @"(?<EventResult>.*?)\s" +
+        @"\((?<Success>.*?)" +
+        @"(?:\/(?<MaxChance>\d+))*\)";
+
     // Regex Identifiers: Bestiary
     internal static string MonsterId => @"MonsterId";
     internal static string SnesId => @"SnesId";
@@ -95,4 +100,9 @@ internal static class BestiarySettings
     internal static string World => @"World";
     internal static string PrimaryLocation => @"PrimaryLocation";
     internal static string SecondaryLocation => @"SecondaryLocation";
+
+    // Regex Identifiers: Chance Events
+    internal static string EventResult => @"EventResult";
+    internal static string Success => @"Success";
+    internal static string MaxChance => @"MaxChance";
 }

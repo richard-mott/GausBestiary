@@ -1,4 +1,5 @@
 ﻿using System.Text.RegularExpressions;
+using GausBestiary.Models.ChanceEvents;
 using GausBestiary.Models.MonsterDetails;
 using GausBestiary.Models.ProviderSettings;
 using GausBestiary.Models.RageSkills;
@@ -8,20 +9,6 @@ namespace GausBestiary.Models.Providers;
 
 public class RegexDataProvider : IDataProvider
 {
-    
-    private const string AttackSpellPattern =
-        @"RageId: (?<RageId>\d{1,3})" + ControlChars.NewLine +
-        @"GBA Name: (?<GBAName>.*?)" + ControlChars.NewLine +
-        @"SNES Name: (?<SNESName>.*?)" + ControlChars.NewLine +
-        @"Power: (?<Power>.*?)" + ControlChars.NewLine +
-        @"Hit Rate: (?<HitRate>.*?)" + ControlChars.NewLine +
-        @"Element: (?<Element>.*?)" + ControlChars.NewLine +
-        @"Status: (?<Status>.*?)" + ControlChars.NewLine +
-        @"Ignores Defense: (?<IgnoresDefense>Yes|No)" + ControlChars.NewLine +
-        @"Unblockable: (?<Unblockable>Yes|No)" + ControlChars.NewLine +
-        @"Splits Damage: (?<SplitsDamage>Yes|No)" + ControlChars.NewLine +
-        @"(?:Description: (?<Description>.*?)\n)?";
-
     public IEnumerable<Monster> GetMonsters()
     {
         var bestiaryText = File.ReadAllText(BestiarySettings.FileName);
@@ -69,6 +56,8 @@ public class RegexDataProvider : IDataProvider
         return rages;
     }
 
+    #region Base Monster
+
     private Monster GetBaseMonster(Match match)
     {
         return new Monster
@@ -95,21 +84,15 @@ public class RegexDataProvider : IDataProvider
         var splitLocations = locationText.Split(",");
         var regex = new Regex(BestiarySettings.LocationRegexPattern);
 
-        var locations = new List<Location>();
-        foreach (var location in splitLocations)
-        {
-            var match = regex.Match(location);
-            var newLocation = new Location
+        return splitLocations
+            .Select(location => regex.Match(location))
+            .Select(match => new Location
             {
-                World = (World)Enum.Parse(typeof(World), GetString(match, BestiarySettings.World)),
-                PrimaryLocation = GetString(match, BestiarySettings.PrimaryLocation),
+                World = (World)Enum.Parse(typeof(World), GetString(match, BestiarySettings.World)), 
+                PrimaryLocation = GetString(match, BestiarySettings.PrimaryLocation), 
                 SecondaryLocations = new List<string>(GetString(match, BestiarySettings.SecondaryLocation).Split("|"))
-            };
-
-            locations.Add(newLocation);
-        }
-
-        return locations;
+            })
+            .ToList();
     }
 
     private MonsterType GetMonsterType(string monsterType)
@@ -125,6 +108,10 @@ public class RegexDataProvider : IDataProvider
                 (current, type) => 
                     current | (MonsterType)Enum.Parse(typeof(MonsterType), type));
     }
+
+    #endregion
+
+    #region Monster Stats
 
     private Stats GetMonsterStats(Match match)
     {
@@ -143,17 +130,66 @@ public class RegexDataProvider : IDataProvider
         };
     }
 
+    #endregion
+
+    #region Monster Rewards
+
     private Rewards GetMonsterRewards(Match match)
     {
         return new Rewards
         {
             Gil = GetNumber(match, BestiarySettings.Gil),
-            Experience = GetNumber(match, BestiarySettings.Experience)
-            // Steal
-            // Drops
-            // Metamorphose
+            Experience = GetNumber(match, BestiarySettings.Experience),
+            Steal = GetItems(GetString(match, BestiarySettings.Steal)).ToList(),
+            Drops = GetItems(GetString(match, BestiarySettings.Drops)).ToList(),
+            Metamorphose = GetMetamorphose(GetString(match, BestiarySettings.Metamorphose))
         };
     }
+
+    private IEnumerable<Item> GetItems(string itemText)
+    {
+        if (itemText == "None")
+        {
+            return new List<Item>();
+        }
+
+        var regex = new Regex(BestiarySettings.ChanceEventRegexPattern);
+        
+        return itemText
+            .Split(",")
+            .Select(item => regex.Match(item.Trim()))
+            .Select(match => new Item(
+                GetString(match, BestiarySettings.EventResult),
+                GetChance(match)))
+            .ToList();
+    }
+
+    private Metamorphose GetMetamorphose(string metamorphoseText)
+    {
+        var regex = new Regex(BestiarySettings.ChanceEventRegexPattern);
+        var match = regex.Match(metamorphoseText);
+
+        return new Metamorphose(
+            GetString(match, BestiarySettings.EventResult),
+            GetChance(match));
+    }
+
+    private IEnumerable<Sketch> GetSketches(string sketchText)
+    {
+        var regex = new Regex(BestiarySettings.ChanceEventRegexPattern);
+
+        return sketchText
+            .Split(",")
+            .Select(sketch => regex.Match(sketch.Trim()))
+            .Select(match => new Sketch(
+                GetString(match, BestiarySettings.EventResult),
+                GetChance(match)))
+            .ToList();
+    }
+
+    #endregion
+
+    #region Monster Defenses
 
     private Defenses GetMonsterDefenses(Match match)
     {
@@ -171,6 +207,10 @@ public class RegexDataProvider : IDataProvider
         };
     }
 
+    #endregion
+
+    #region Monster Skills
+
     private Skills GetMonsterSkills(Match match)
     {
         var rages = GetRages();
@@ -179,11 +219,28 @@ public class RegexDataProvider : IDataProvider
         {
             SpecialAttack = GetString(match, BestiarySettings.SpecialAttack),
             Rage = rages.First(rage => rage.GbaName == GetString(match, BestiarySettings.Rage) && rage.RageId == GetNumber(match, BestiarySettings.RageId)),
-            // Sketch
+            Sketch = GetSketches(GetString(match, BestiarySettings.Sketch)).ToList(),
             Control = GetString(match, BestiarySettings.Control)
                 .Split(",")
                 .Select(ability => ability.Trim())
                 .ToList()
+        };
+    }
+
+    #endregion
+
+    #region Rage Skills
+
+    private RageSkill GetBaseRageSkill(Match match)
+    {
+        return new RageSkill
+        {
+            RageId = GetNumber(match, RageSettings.RageId),
+            SnesName = GetString(match, RageSettings.SnesName),
+            PlayStationName = GetString(match, RageSettings.SnesName),
+            GbaName = GetString(match, RageSettings.GbaName),
+            MobileName = GetString(match, RageSettings.GbaName),
+            PixelRemasterName = GetString(match, RageSettings.GbaName)
         };
     }
 
@@ -296,18 +353,9 @@ public class RegexDataProvider : IDataProvider
         return statusSpells;
     }
 
-    private RageSkill GetBaseRageSkill(Match match)
-    {
-        return new RageSkill
-        {
-            RageId = GetNumber(match, RageSettings.RageId),
-            SnesName = GetString(match, RageSettings.SnesName),
-            PlayStationName = GetString(match, RageSettings.SnesName),
-            GbaName = GetString(match, RageSettings.GbaName),
-            MobileName = GetString(match, RageSettings.GbaName),
-            PixelRemasterName = GetString(match, RageSettings.GbaName)
-        };
-    }
+    #endregion
+
+    #region Type Parsing
 
     private Element GetElement(Match match, string identifier)
     {
@@ -348,4 +396,25 @@ public class RegexDataProvider : IDataProvider
 
         return value is "true" or "yes";
     }
+
+    private Chance GetChance(Match match)
+    {
+        var success = GetString(match, BestiarySettings.Success);
+
+        if (success == "Always")
+        {
+            return new Chance(1, 1);
+        }
+
+        if (success == "Never")
+        {
+            return new Chance(0, 1);
+        }
+
+        return new Chance(
+            GetNumber(match, BestiarySettings.Success), 
+            GetNumber(match, BestiarySettings.MaxChance));
+    }
+
+    #endregion
 }
