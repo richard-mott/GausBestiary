@@ -3,13 +3,8 @@
 /// <summary>
 /// Stores an attack spell used by the Rage command.
 /// </summary>
-public class AttackSpell : IRageSkill
+public class AttackSpell : RageSkill
 {
-    /// <summary>
-    /// The name of the spell.
-    /// </summary>
-    public string Name { get; set; }
-
     /// <summary>
     /// The description of the spell.
     /// </summary>
@@ -49,4 +44,14 @@ public class AttackSpell : IRageSkill
     /// Is damage split between all targets of the spell?
     /// </summary>
     public bool IsSplitDamage { get; set; }
+
+    public AttackSpell(RageSkill baseRage)
+    {
+        this.RageId = baseRage.RageId;
+        this.SnesName = baseRage.SnesName;
+        this.PlayStationName = baseRage.PlayStationName;
+        this.GbaName = baseRage.GbaName;
+        this.MobileName = baseRage.MobileName;
+        this.PixelRemasterName = baseRage.PixelRemasterName;
+    }
 }

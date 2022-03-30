@@ -16,7 +16,7 @@ public class Skills
     /// <summary>
     /// The skill that is used by the Rage command.
     /// </summary>
-    public IRageSkill Rage { get; set; }
+    public RageSkill Rage { get; set; }
 
     /// <summary>
     /// The skills used by Sketch.

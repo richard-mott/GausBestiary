@@ -1,0 +1,1162 @@
+RageId: 1
+GBA Name: 1000 Needles
+SNES Name: Blow Fish
+Power: 0
+Hit Rate: 0
+Element: None
+Status: None
+Ignores Defense: Yes
+Unblockable: Yes
+Splits Damage: Yes
+Description: Damage is always 1000.
+
+RageId: 2
+GBA Name: Acid Rain
+SNES Name: Acid Rain
+Power: 25
+Hit Rate: 100
+Element: Poison, Water
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: No
+
+RageId: 3
+GBA Name: Aero
+SNES Name: Aero
+Power: 150
+Hit Rate: 125
+Element: Wind
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 4
+GBA Name: Aqua Breath
+SNES Name: Aqua Rake
+Power: 71
+Hit Rate: 150
+Element: Water, Wind
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 5
+GBA Name: Avalanche
+SNES Name: Surge
+Power: 55
+Hit Rate: 0
+Element: Ice
+Status: None
+Ignores Defense: No
+Unblockable: Yes
+Splits Damage: No
+
+RageId: 6
+GBA Name: Bad Breath
+SNES Name: Sour Mouth
+Target: Enemy
+Hit Rate: 100
+Unblockable: No
+Status: Darkness, Confusion, Imp, Silence, Poison, Sleep
+Description: Targets all enemies.
+
+RageId: 7
+GBA Name: Banish
+SNES Name: X-Zone
+Target: Enemy
+Hit Rate: 85
+Unblockable: No
+Status: Death
+Description: Targets all enemies. Prevents enemy counterattack.
+
+RageId: 8
+GBA Name: Berserk
+SNES Name: Bserk
+Target: Ally
+Hit Rate: 150
+Unblockable: No
+Status: Berserk
+
+RageId: 9
+GBA Name: Bio
+SNES Name: Bio
+Power: 53
+Hit Rate: 120
+Element: Poison
+Status: Poison
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 10
+GBA Name: Bite
+SNES Name: Bite
+Level: 1
+Power: 1.5x
+
+RageId: 11
+GBA Name: Blaster
+SNES Name: Blaster
+Target: Enemy
+Hit Rate: 70
+Unblockable: No
+Status: Death
+
+RageId: 12
+GBA Name: Blaze
+SNES Name: Blaze
+Power: 68
+Hit Rate: 120
+Element: Fire
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 13
+GBA Name: Blizzaga
+SNES Name: Ice 3
+Power: 122
+Hit Rate: 150
+Element: Ice
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 14
+GBA Name: Blizzara
+SNES Name: Ice 2
+Power: 62
+Hit Rate: 150
+Element: Ice
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 15
+GBA Name: Bodyslam
+SNES Name: Rush
+Level: 4
+Power: 3x
+
+RageId: 16
+GBA Name: Break
+SNES Name: Break
+Target: Enemy
+Hit Rate: 120
+Unblockable: No
+Status: Petrify
+
+RageId: 17
+GBA Name: Cat Scratch
+SNES Name: Catscratch
+Level: 6
+Power: 4x
+
+RageId: 18
+GBA Name: Cave In
+SNES Name: Cave In
+Power: 0
+Hit Rate: 0
+Element: None
+Status: Sap
+Ignores Defense: No
+Unblockable: Yes
+Splits Damage: Yes
+Description: Reduces target's HP to 25%.
+
+RageId: 19
+GBA Name: Chomp
+SNES Name: Tusk
+Level: 1
+Power: 1.5x
+
+RageId: 20
+GBA Name: Clamp
+SNES Name: Clamp
+Level: 1
+Power: 1.5x
+
+RageId: 21
+GBA Name: Cling
+SNES Name: Cling
+Status: Slow
+
+RageId: 22
+GBA Name: Confuse
+SNES Name: Muddle
+Target: Enemy
+Hit Rate: 94
+Unblockable: No
+Status: Confusion
+
+RageId: 23
+GBA Name: Critical
+SNES Name: Critical
+Level: 1
+Power: 1.5x
+
+RageId: 24
+GBA Name: Cura
+SNES Name: Cure 2
+Power: 28
+Description: Heals one or all allies.
+
+RageId: 25
+GBA Name: Curaga
+SNES Name: Cure 3
+Power: 66
+Description: Heals one or all allies.
+
+RageId: 26
+GBA Name: Cyclonic
+SNES Name: Cyclonic
+Power: 0
+Hit Rate: 75
+Element: None
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+Description: Reduces target's HP to 6.25%.
+
+RageId: 27
+GBA Name: Death
+SNES Name: Doom
+Target: Enemy
+Hit Rate: 95
+Unblockable: No
+Status: Death
+
+RageId: 28
+GBA Name: Digestive Fluid
+SNES Name: Heart Burn
+Status: Sap
+
+RageId: 29
+GBA Name: Disaster
+SNES Name: Disaster
+Target: Enemy
+Hit Rate: 62
+Unblockable: No
+Status: Darkness, Confusion, Doom, Float, Imp
+Description: Targets all enemies.
+
+RageId: 30
+GBA Name: Dischord
+SNES Name: Dischord
+Target: Enemy
+Hit Rate: 100
+Unblockable: No
+Status: None
+Description: Reduces target to 50% of its prior level.
+
+RageId: 31
+GBA Name: Doom
+SNES Name: Condemned
+Target: Enemy
+Hit Rate: 0
+Unblockable: Yes
+Status: Doom
+
+RageId: 32
+GBA Name: Drain
+SNES Name: Drain
+Power: 38
+Hit Rate: 120
+Element: None
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+Description: Drains HP. No damage past caster's maximum HP.
+
+RageId: 33
+GBA Name: Dread Gaze
+SNES Name: Dread
+Target: Enemy
+Hit Rate: 75
+Unblockable: No
+Status: Petrify
+
+RageId: 34
+GBA Name: Entice
+SNES Name: Charm
+Target: Enemy
+Hit Rate: 80
+Unblockable: No
+Status: Confusion
+Description: No immune enemies. Never wears off. Cannot be cured. Only works on one target at a time.
+
+RageId: 35
+GBA Name: Esuna
+SNES Name: Remedy
+Power: 0
+Description: Cures Confusion, Dark, Silence, Poison, Petrify, Sap, Sleep, Slop, Stop.
+
+RageId: 36
+GBA Name: Face Chomp
+SNES Name: Face Bite
+Status: Darkness
+
+RageId: 37
+GBA Name: Featherdust
+SNES Name: Duster
+Status: Poison
+
+RageId: 38
+GBA Name: Fire
+SNES Name: Fire
+Power: 21
+Hit Rate: 150
+Element: Fire
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 39
+GBA Name: Fira
+SNES Name: Fire 2
+Power: 60
+Hit Rate: 150
+Element: Fire
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 40
+GBA Name: Firaga
+SNES Name: Fire 3
+Power: 121
+Hit Rate: 150
+Element: Fire
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 41
+GBA Name: Fireball
+SNES Name: Fire Ball
+Power: 50
+Hit Rate: 150
+Element: Fire
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 42
+GBA Name: Flare
+SNES Name: Flare
+Power: 60
+Hit Rate: 150
+Element: None
+Status: None
+Ignores Defense: Yes
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 43
+GBA Name: Flare Star
+SNES Name: Flare Star
+Power: 0
+Hit Rate: 0
+Element: None
+Status: None
+Ignores Defense: Yes
+Unblockable: Yes
+Splits Damage: Yes
+Description: Damage is 80 times the level of a random target, divided by the number of targets.
+
+RageId: 44
+GBA Name: Flash Rain
+SNES Name: Flash Rain
+Power: 60
+Hit Rate: 150
+Element: Ice, Water
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 45
+GBA Name: Gigavolt
+SNES Name: Giga Volt
+Power: 110
+Hit Rate: 130
+Element: Lightning
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 46
+GBA Name: Gouge
+SNES Name: Gouge
+Level: 1
+Power: 2.5x
+
+RageId: 47
+GBA Name: Gravity
+SNES Name: Demi
+Power: 0
+Hit Rate: 120
+Element: None
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+Description: Reduces target's HP to 50%.
+
+RageId: 48
+GBA Name: Gravity Bomb
+SNES Name: Grav Bomb
+Power: 0
+Hit Rate: 100
+Element: None
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+Description: Reduces target's HP to 50%.
+
+RageId: 49
+GBA Name: Growl
+SNES Name: Oogyboog
+Level: 2
+Power: 2x
+
+RageId: 50
+GBA Name: Haste
+SNES Name: Haste
+Target: Ally
+Hit Rate: 0
+Unblockable: Yes
+Status: Haste
+
+RageId: 51
+GBA Name: Hastega
+SNES Name: Haste2
+Target: Ally
+Hit Rate: 0
+Unblockable: Yes
+Status: Haste
+Description: Targets all allies.
+
+RageId: 52
+GBA Name: Holy
+SNES Name: Pearl
+Power: 108
+Hit Rate: 150
+Element: Holy
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 53
+GBA Name: Imp
+SNES Name: Imp
+Target: Enemy
+Hit Rate: 100
+Unblockable: No
+Status: Imp
+Description: Removes Imp status if already set.
+
+RageId: 54
+GBA Name: Incisors
+SNES Name: Incisor
+Level: 1
+Power: 1.5x
+
+RageId: 55
+GBA Name: Ink
+SNES Name: Ink
+Status: Darkness
+
+RageId: 56
+GBA Name: Iron Stinger
+SNES Name: IronNeedle
+Level: 1
+Power: 1.5x
+
+RageId: 57
+GBA Name: Knife
+SNES Name: Knife
+Level: 14
+Power: 8x
+
+RageId: 58
+GBA Name: Landslide
+SNES Name: Slide
+Power: 75
+Hit Rate: 0
+Element: Earth
+Status: None
+Ignores Defense: No
+Unblockable: Yes
+Splits Damage: Yes
+
+RageId: 59
+GBA Name: Leech
+SNES Name: Raid
+Power: 40
+Hit Rate: 100
+Element: None
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+Description: Drains HP. No damage past caster's maximum HP.
+
+RageId: 60
+GBA Name: Libra
+SNES Name: Scan
+Target: Enemy
+Hit Rate: 222
+Unblockable: No
+Status: Scan
+Description: Displays target's HP and weaknesses.
+
+RageId: 61
+GBA Name: Lifeshaver
+SNES Name: LifeShaver
+Power: 84
+Hit Rate: 0
+Element: None
+Status: None
+Ignores Defense: No
+Unblockable: Yes
+Splits Damage: Yes
+Description: Drains HP. No damage past caster's maximum HP.
+
+RageId: 62
+GBA Name: Lullaby
+SNES Name: Lullaby
+Target: Enemy
+Hit Rate: 90
+Unblockable: No
+Status: Sleep
+
+RageId: 63
+GBA Name: Lv.3 Confuse
+SNES Name: L.3 Muddle
+Target: Enemy
+Hit Rate: 0
+Unblockable: No
+Status: Confusion
+Description: Targets enemies of level divisible by three.
+
+RageId: 64
+GBA Name: Lv.4 Flare
+SNES Name: L.4 Flare
+Power: 65
+Hit Rate: 0
+Element: None
+Status: None
+Ignores Defense: Yes
+Unblockable: No
+Splits Damage: No
+Description: Targets enemies of level divisible by four.
+
+RageId: 65
+GBA Name: Magitek Laser
+SNES Name: Tek Laser
+Power: 20
+Hit Rate: 150
+Element: Lightning
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 66
+GBA Name: Magnitude 8
+SNES Name: Magnitude8
+Power: 100
+Hit Rate: 130
+Element: Earth
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+Description: Cannot hit targets with Float.
+
+RageId: 67
+GBA Name: Mega Berserk
+SNES Name: Megazerk
+Target: Enemy
+Hit Rate: 0
+Unblockable: Yes
+Status: Berserk
+Description: Targets all enemies.
+
+RageId: 68
+GBA Name: Megavolt
+SNES Name: Mega Volt
+Power: 20
+Hit Rate: 150
+Element: Lightning
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 69
+GBA Name: Meltdown
+SNES Name: Merton
+Power: 138
+Hit Rate: 0
+Element: Fire, Wind
+Status: None
+Ignores Defense: Yes
+Unblockable: Yes
+Splits Damage: Yes
+Description: Targets allies as well as enemies.
+
+RageId: 70
+GBA Name: Metal Cutter
+SNES Name: Shrapnel
+Power: 120
+Hit Rate: 120
+Element: None
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 71
+GBA Name: Meteor
+SNES Name: Meteor
+Power: 36
+Hit Rate: 0
+Element: None
+Status: None
+Ignores Defense: Yes
+Unblockable: Yes
+Splits Damage: Yes
+
+RageId: 72
+GBA Name: Meteor
+SNES Name: Meteo
+Power: 60
+Hit Rate: 80
+Element: None
+Status: None
+Ignores Defense: Yes
+Unblockable: No
+Splits Damage: No
+
+RageId: 73
+GBA Name: Mighty Guard
+SNES Name: Big Guard
+Target: Ally
+Hit Rate: 0
+Unblockable: Yes
+Status: Protect, Shell
+Description: Targets all allies.
+
+RageId: 74
+GBA Name: Net
+SNES Name: Net
+Target: Enemy
+Hit Rate: 100
+Unblockable: No
+Status: Stop
+
+RageId: 75
+GBA Name: Northern Cross
+SNES Name: N. Cross
+Target: Enemy
+Hit Rate: 45
+Unblockable: No
+Status: Frozen
+Description: Hit rate is 90, but only effective half the time.
+
+RageId: 76
+GBA Name: Numb
+SNES Name: Numb
+Status: Stop
+
+RageId: 77
+GBA Name: Numbclaw
+SNES Name: Numblade
+Status: Stop
+
+RageId: 78
+GBA Name: Osmose
+SNES Name: Osmose
+Power: 26
+Hit Rate: 150
+Element: None
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+Description: Drains MP.
+
+RageId: 79
+GBA Name: Overture
+SNES Name: Love Token
+Target: Enemy
+Hit Rate: 0
+Unblockable: Yes
+Status: None
+Description: Makes target take physical damage for the caster.
+
+RageId: 80
+GBA Name: Pincer
+SNES Name: Scissors
+Level: 1
+Power: 1.5x
+
+RageId: 81
+GBA Name: Plasma
+SNES Name: Plasma
+Power: 70
+Hit Rate: 0
+Element: Lightning
+Status: None
+Ignores Defense: No
+Unblockable: Yes
+Splits Damage: Yes
+
+RageId: 82
+GBA Name: Poison
+SNES Name: Poison
+Power: 25
+Hit Rate: 100
+Element: Poison
+Status: Poison
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 83
+GBA Name: Poison Barb
+SNES Name: PoisonBarb
+Status: Poison
+
+RageId: 84
+GBA Name: Poison Touch
+SNES Name: Bane Touch
+Status: Poison
+
+RageId: 85
+GBA Name: Pounce
+SNES Name: Pounce
+Level: 2
+Power: 2x
+
+RageId: 86
+GBA Name: Protect
+SNES Name: Safe
+Target: Ally
+Hit Rate: 0
+Unblockable: Yes
+Status: Protect
+
+RageId: 87
+GBA Name: Quake
+SNES Name: Quake
+Power: 111
+Hit Rate: 0
+Element: Earth
+Status: None
+Ignores Defense: Yes
+Unblockable: No
+Splits Damage: Yes
+Description: Targets allies as well as enemies. Cannot hit targets with Float.
+
+RageId: 88
+GBA Name: Raise
+SNES Name: Life
+Power: 0
+Description: Cures Wounded. Restores target's HP to 12.5% HP.
+
+RageId: 89
+GBA Name: Rasp
+SNES Name: Rasp
+Power: 10
+Hit Rate: 150
+Element: None
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+Description: Damages target's MP.
+
+RageId: 90
+GBA Name: Reflect
+SNES Name: Rflect
+Target: Ally
+Hit Rate: 0
+Unblockable: Yes
+Status: Reflect
+
+RageId: 91
+GBA Name: Reraise
+SNES Name: Life 3
+Power: 0
+Description: Sets Reraise status. When target dies, cast Life.
+
+RageId: 92
+GBA Name: Revenge Blast
+SNES Name: Revenge
+Power: 0
+Hit Rate: 0
+Element: None
+Status: None
+Ignores Defense: Yes
+Unblockable: Yes
+Splits Damage: Yes
+Description: Damage is the caster's max HP minus current HP.
+
+RageId: 93
+GBA Name: Rock Slide
+SNES Name: Land Slide
+Power: 65
+Hit Rate: 0
+Element: None
+Status: None
+Ignores Defense: Yes
+Unblockable: Yes
+Splits Damage: Yes
+
+RageId: 94
+GBA Name: Roulette
+SNES Name: Roulette
+Target: Enemy
+Hit Rate: 0
+Unblockable: Yes
+Status: Death
+Description: Targets randomly, but never targets allies.
+
+RageId: 95
+GBA Name: Sandstorm
+SNES Name: Sand Storm
+Power: 45
+Hit Rate: 0
+Element: Wind
+Status: None
+Ignores Defense: No
+Unblockable: Yes
+Splits Damage: No
+
+RageId: 96
+GBA Name: Scratch
+SNES Name: Scratch
+Level: 1
+Power: 1.5x
+
+RageId: 97
+GBA Name: Self-Destruct
+SNES Name: Exploder
+Power: 0
+Hit Rate: 0
+Element: None
+Status: None
+Ignores Defense: Yes
+Unblockable: Yes
+Splits Damage: Yes
+Description: Damage is caster's HP. Kills caster.
+
+RageId: 98
+GBA Name: Shamshir
+SNES Name: Shimsham
+Power: 0
+Hit Rate: 0
+Element: None
+Status: None
+Ignores Defense: No
+Unblockable: Yes
+Splits Damage: Yes
+Description: Reduces target's HP to 50%.
+
+RageId: 99
+GBA Name: Shell
+SNES Name: Shell
+Target: Ally
+Hit Rate: 0
+Unblockable: Yes
+Status: Shell
+
+RageId: 100
+GBA Name: Shell Slam
+SNES Name: Husk
+Level: 1
+Power: 1.5x
+
+RageId: 101
+GBA Name: Shock
+SNES Name: Shock
+Power: 128
+Hit Rate: 0
+Element: None
+Status: None
+Ignores Defense: No
+Unblockable: Yes
+Splits Damage: Yes
+
+RageId: 102
+GBA Name: Shockwave
+SNES Name: Shock Wave
+Power: 25
+Hit Rate: 120
+Element: None
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 103
+GBA Name: Silence
+SNES Name: Mute
+Target: Enemy
+Hit Rate: 100
+Unblockable: No
+Status: Silence
+
+RageId: 104
+GBA Name: Sleep
+SNES Name: Sleep
+Target: Enemy
+Hit Rate: 111
+Unblockable: No
+Status: Sleep
+
+RageId: 105
+GBA Name: Sleepsting
+SNES Name: SleepSting
+Status: Sleep
+
+RageId: 106
+GBA Name: Slowga
+SNES Name: Slow 2
+Target: Enemy
+Hit Rate: 150
+Unblockable: No
+Status: Slow
+Description: Targets all enemies.
+
+RageId: 107
+GBA Name: Snare
+SNES Name: Snare
+Target: Enemy
+Hit Rate: 100
+Unblockable: No
+Status: Death
+
+RageId: 108
+GBA Name: Snowstorm
+SNES Name: Blizzard
+Power: 25
+Hit Rate: 140
+Element: Ice
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 109
+GBA Name: Snowstorm
+SNES Name: Storm
+Power: 100
+Hit Rate: 0
+Element: Ice
+Status: None
+Ignores Defense: No
+Unblockable: Yes
+Splits Damage: Yes
+
+RageId: 110
+GBA Name: Sonic Boom
+SNES Name: Sonic Boom
+Power: 0
+Hit Rate: 0
+Element: None
+Status: Sap
+Ignores Defense: No
+Unblockable: Yes
+Splits Damage: Yes
+Description: Reduces target's HP to 37.5%.
+
+RageId: 111
+GBA Name: Sticky Goo
+SNES Name: Slimer
+Target: Enemy
+Hit Rate: 100
+Unblockable: No
+Status: Slow
+
+RageId: 112
+GBA Name: Stone
+SNES Name: Stone
+Power: 40
+Hit Rate: 75
+Element: None
+Status: Confusion
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+Description: Multiplies damage by 14x if caster and target are the same level.
+
+RageId: 113
+GBA Name: Stop
+SNES Name: Stop
+Target: Enemy
+Hit Rate: 100
+Unblockable: No
+Status: Stop
+
+RageId: 114
+GBA Name: Swing
+SNES Name: Swing
+Level: 2
+Power: 2x
+
+RageId: 115
+GBA Name: Tackle
+SNES Name: Tackle
+Level: 1
+Power: 1.5x
+
+RageId: 116
+GBA Name: Tail
+SNES Name: Tail
+Level: 1
+Power: 1.5x
+
+RageId: 117
+GBA Name: Thundaga
+SNES Name: Bolt 3
+Power: 120
+Hit Rate: 150
+Element: Lightning
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 118
+GBA Name: Thundara
+SNES Name: Bolt 2
+Power: 61
+Hit Rate: 150
+Element: Lightning
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 119
+GBA Name: Tornado
+SNES Name: W Wind
+Power: 0
+Hit Rate: 100
+Element: None
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: No
+Description: Reduces target's HP to 6.25%.
+
+RageId: 120
+GBA Name: Transfusion
+SNES Name: Pep Up
+Power: 0
+Description: Heals an amount equal to the caster's HP. Caster is removed from battle.
+
+RageId: 121
+GBA Name: Traveler
+SNES Name: Step Mine
+Power: 0
+Hit Rate: 0
+Element: None
+Status: None
+Ignores Defense: Yes
+Unblockable: Yes
+Splits Damage: Yes
+Description: Damage is number of steps divided by 32.
+
+RageId: 122
+GBA Name: Tsunami
+SNES Name: Cleansweep
+Power: 50
+Hit Rate: 150
+Element: Water
+Status: None
+Ignores Defense: No
+Unblockable: No
+Splits Damage: No
+
+RageId: 123
+GBA Name: Vanish
+SNES Name: Vanish
+Target: Ally
+Hit Rate: 0
+Unblockable: Yes
+Status: Invisible
+
+RageId: 124
+GBA Name: Venomist
+SNES Name: Virite
+Power: 20
+Hit Rate: 80
+Element: Poison
+Status: Poison
+Ignores Defense: No
+Unblockable: No
+Splits Damage: Yes
+
+RageId: 125
+GBA Name: Water Scroll
+SNES Name: Water Edge
+Power: 100
+Hit Rate: 0
+Element: Water
+Status: None
+Ignores Defense: No
+Unblockable: Yes
+Splits Damage: Yes
+
+RageId: 126
+GBA Name: White Wind
+SNES Name: Pearl Wind
+Power: 0
+Description: Heals all allies. Amount is equal to the caster's HP.
+
+RageId: 127
+GBA Name: Will o' the Wisp
+SNES Name: Elf Fire
+Power: 72
+Hit Rate: 0
+Element: Fire
+Status: None
+Ignores Defense: No
+Unblockable: Yes
+Splits Damage: Yes
+
+RageId: 128
+GBA Name: Wind Slash
+SNES Name: Wind Slash
+Power: 48
+Hit Rate: 0
+Element: Wind
+Status: None
+Ignores Defense: No
+Unblockable: Yes
+Splits Damage: No
+
+RageId: 129
+GBA Name: Wing Snap
+SNES Name: Wing Whisp
+Status: Berserk

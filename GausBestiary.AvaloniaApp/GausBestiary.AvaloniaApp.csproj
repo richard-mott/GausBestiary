@@ -28,7 +28,13 @@
     <PackageReference Include="XamlNameReferenceGenerator" Version="1.3.4" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="regex_bestiary.txt">
+    <ProjectReference Include="..\GausBestiary.Models\GausBestiary.Models.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="bestiary_regex.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="rages_regex.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

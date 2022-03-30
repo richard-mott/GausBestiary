@@ -3,13 +3,8 @@
 /// <summary>
 /// Stores a healing spell used by the Rage command.
 /// </summary>
-public class HealingSpell : IRageSkill
+public class HealingSpell : RageSkill
 {
-    /// <summary>
-    /// The name of the spell.
-    /// </summary>
-    public string Name { get; set; }
-
     /// <summary>
     /// The description of the spell.
     /// </summary>
@@ -19,4 +14,14 @@ public class HealingSpell : IRageSkill
     /// The magic power of the spell, used for healing calculations.
     /// </summary>
     public string Power { get; set; }
+
+    public HealingSpell(RageSkill baseRage)
+    {
+        this.RageId = baseRage.RageId;
+        this.SnesName = baseRage.SnesName;
+        this.PlayStationName = baseRage.PlayStationName;
+        this.GbaName = baseRage.GbaName;
+        this.MobileName = baseRage.MobileName;
+        this.PixelRemasterName = baseRage.PixelRemasterName;
+    }
 }
