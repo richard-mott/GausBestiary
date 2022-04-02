@@ -6,6 +6,11 @@
 public class Sketch
 {
     /// <summary>
+    /// Internal id.
+    /// </summary>
+    public int SketchId { get; set; }
+
+    /// <summary>
     /// The name of the ability.
     /// </summary>
     public string Ability { get; set; }

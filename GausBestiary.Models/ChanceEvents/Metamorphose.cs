@@ -6,6 +6,11 @@
 public class Metamorphose
 {
     /// <summary>
+    /// Internal id.
+    /// </summary>
+    public int MetamorphoseID { get; set; }
+
+    /// <summary>
     /// The list of possible item rewards. All items have the same chance of being the reward.
     /// </summary>
     public List<Item> Items { get; set; }

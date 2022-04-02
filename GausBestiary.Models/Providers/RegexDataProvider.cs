@@ -3,7 +3,6 @@ using GausBestiary.Models.ChanceEvents;
 using GausBestiary.Models.MonsterDetails;
 using GausBestiary.Models.ProviderSettings;
 using GausBestiary.Models.RageSkills;
-using Microsoft.VisualBasic;
 
 namespace GausBestiary.Models.Providers;
 
@@ -62,7 +61,7 @@ public class RegexDataProvider : IDataProvider
     {
         return new Monster
         {
-            Id = GetNumber(match, BestiarySettings.MonsterId),
+            MonsterId = GetNumber(match, BestiarySettings.MonsterId),
             SnesId = GetNumber(match, BestiarySettings.SnesId),
             PlayStationId = GetNumber(match, BestiarySettings.SnesId),
             GbaId = GetNumber(match, BestiarySettings.GbaId),
