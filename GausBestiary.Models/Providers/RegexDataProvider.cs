@@ -10,7 +10,9 @@ public class RegexDataProvider : IDataProvider
 {
     public IEnumerable<Monster> GetMonsters()
     {
-        var bestiaryText = File.ReadAllText(BestiarySettings.FileName);
+        var path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+
+        var bestiaryText = File.ReadAllText($"{path}\\{BestiarySettings.FileName}");
         var regex = new Regex(BestiarySettings.BestiaryRegexPattern);
         var matches = regex.Matches(bestiaryText);
 

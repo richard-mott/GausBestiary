@@ -10,6 +10,8 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <AvaloniaResource Include="Assets\**" />
+    <AvaloniaXaml Remove="Assets\GlobalResources.axaml" />
+    <Folder Include="ViewModels\RageSkills\" />
     <None Remove=".gitignore" />
   </ItemGroup>
   <ItemGroup>
@@ -29,6 +31,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GausBestiary.Models\GausBestiary.Models.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Update="Assets\GlobalResources.axaml">
+      <SubType>Designer</SubType>
+    </AvaloniaResource>
   </ItemGroup>
   <ItemGroup>
     <None Update="bestiary_regex.txt">
