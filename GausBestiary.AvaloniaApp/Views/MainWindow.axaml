@@ -6,12 +6,19 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="GausBestiary.AvaloniaApp.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
-        Title="GausBestiary.AvaloniaApp">
+        Title="Gau's Ultimate Bestiary"
+        FontFamily="Consolas">
 
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+	<Grid>
+		<ScrollViewer Width="700">
+            <ItemsControl 
+                Items="{Binding Monsters}">
+            </ItemsControl>
+        </ScrollViewer>
+        
+	</Grid>
 </Window>

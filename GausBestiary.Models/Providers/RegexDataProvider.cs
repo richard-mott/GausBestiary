@@ -3,7 +3,6 @@ using GausBestiary.Models.ChanceEvents;
 using GausBestiary.Models.MonsterDetails;
 using GausBestiary.Models.ProviderSettings;
 using GausBestiary.Models.RageSkills;
-using Microsoft.VisualBasic;
 
 namespace GausBestiary.Models.Providers;
 
@@ -11,7 +10,9 @@ public class RegexDataProvider : IDataProvider
 {
     public IEnumerable<Monster> GetMonsters()
     {
-        var bestiaryText = File.ReadAllText(BestiarySettings.FileName);
+        var path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+
+        var bestiaryText = File.ReadAllText($"{path}\\{BestiarySettings.FileName}");
         var regex = new Regex(BestiarySettings.BestiaryRegexPattern);
         var matches = regex.Matches(bestiaryText);
 
@@ -62,7 +63,7 @@ public class RegexDataProvider : IDataProvider
     {
         return new Monster
         {
-            Id = GetNumber(match, BestiarySettings.MonsterId),
+            MonsterId = GetNumber(match, BestiarySettings.MonsterId),
             SnesId = GetNumber(match, BestiarySettings.SnesId),
             PlayStationId = GetNumber(match, BestiarySettings.SnesId),
             GbaId = GetNumber(match, BestiarySettings.GbaId),

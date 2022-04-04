@@ -6,6 +6,11 @@
 public class Item
 {
     /// <summary>
+    /// Internal id.
+    /// </summary>
+    public int ItemId { get; set; }
+
+    /// <summary>
     /// The name of the item.
     /// </summary>
     public string Name { get; set; }

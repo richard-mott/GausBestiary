@@ -8,9 +8,9 @@ namespace GausBestiary.Models;
 public class Monster
 {
     /// <summary>
-    /// The internal Id for the monster.
+    /// Internal id.
     /// </summary>
-    public int Id { get; set; }
+    public int MonsterId { get; set; }
 
     /// <summary>
     /// The Bestiary Id for the SNES version of the monster.

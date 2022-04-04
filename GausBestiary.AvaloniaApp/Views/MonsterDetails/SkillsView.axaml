@@ -1,0 +1,55 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:GausBestiary.AvaloniaApp.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GausBestiary.AvaloniaApp.Views.MonsterDetails.SkillsView"
+             d:DataContext="{x:Static vm:DesignData.DesignSkills}"
+             FontFamily="Consolas">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceInclude Source="/Assets/GlobalResources.axaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+	<Grid ColumnDefinitions="*, 3*" RowDefinitions="Auto, Auto, Auto, Auto">
+
+		<TextBlock Grid.Row="0" Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Margin="{StaticResource Margin_Normal}"
+                   Padding="{StaticResource Padding_Normal}"
+                   Text="Skills" />
+
+        <TextBlock Grid.Row="1" Grid.Column="0"
+                   Margin="{StaticResource StackMargin_LeftIndent_Normal_Top}"
+                   Padding="{StaticResource Padding_Normal}"
+                   Text="Special Attack:" />
+		<TextBlock Grid.Row="1" Grid.Column="1"
+                   Margin="{StaticResource StackMargin_Normal_Top}"
+                   Padding="{StaticResource Padding_Normal}"
+                   Text="{Binding SpecialAttack}" />
+
+		<TextBlock Grid.Row="2" Grid.Column="0"
+                   Margin="{StaticResource StackMargin_LeftIndent_Normal_Inner}"
+                   Padding="{StaticResource Padding_Normal}"
+                   Text="Rage:" />
+        <TextBlock Grid.Row="2" Grid.Column="1"
+                   Margin="{StaticResource StackMargin_Normal_Inner}"
+                   Padding="{StaticResource Padding_Normal}"
+                   Text="{Binding Rage}" />
+
+        <TextBlock Grid.Row="3" Grid.Column="0"
+                   Margin="{StaticResource StackMargin_LeftIndent_Normal_Bottom}"
+                   Padding="{StaticResource Padding_Normal}"
+                   Text="Sketch:" />
+        <TextBlock Grid.Row="3" Grid.Column="1"
+                   Margin="{StaticResource StackMargin_Normal_Bottom}"
+                   Padding="{StaticResource Padding_Normal}"
+                   Text="{Binding Sketch}" />
+    </Grid>
+
+</UserControl>

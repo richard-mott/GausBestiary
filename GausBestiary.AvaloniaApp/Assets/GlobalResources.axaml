@@ -1,0 +1,42 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=System.Runtime">
+	<!-- Fonts -->
+	<system:Double x:Key="FontSize_Small">20</system:Double>
+	<system:Double x:Key="FontSize_Normal">24</system:Double>
+	<system:Double x:Key="FontSize_Large">28</system:Double>
+
+	<system:Double x:Key="Multiline_LineHeight">28</system:Double>
+
+	<!-- Margins -->
+	<Thickness x:Key="Margin_Narrow">2,2,2,2</Thickness>
+    <Thickness x:Key="Margin_Normal">4,4,4,4</Thickness>
+    <Thickness x:Key="Margin_Wide">8,8,8,8</Thickness>
+
+    <Thickness x:Key="Margin_LeftIndent_Narrow">16,2,2,2</Thickness>
+    <Thickness x:Key="Margin_LeftIndent_Normal">16,4,4,4</Thickness>
+    <Thickness x:Key="Margin_LeftIndent_Wide">16,8,8,8</Thickness>
+
+    <!-- Stack Margins -->
+	<Thickness x:Key="StackMargin_Narrow_Top">2,2,2,0</Thickness>
+    <Thickness x:Key="StackMargin_Narrow_Inner">2,0,2,0</Thickness>
+    <Thickness x:Key="StackMargin_Narrow_Bottom">2,0,2,2</Thickness>
+
+    <Thickness x:Key="StackMargin_LeftIndent_Narrow_Top">16,2,2,0</Thickness>
+    <Thickness x:Key="StackMargin_LeftIndent_Narrow_Inner">16,0,2,0</Thickness>
+    <Thickness x:Key="StackMargin_LeftIndent_Narrow_Bottom">16,0,2,0</Thickness>
+
+    <Thickness x:Key="StackMargin_Normal_Top">4,4,4,1</Thickness>
+    <Thickness x:Key="StackMargin_Normal_Inner">4,1,4,1</Thickness>
+    <Thickness x:Key="StackMargin_Normal_Bottom">4,1,4,4</Thickness>
+
+    <Thickness x:Key="StackMargin_LeftIndent_Normal_Top">16,4,4,1</Thickness>
+    <Thickness x:Key="StackMargin_LeftIndent_Normal_Inner">16,1,4,1</Thickness>
+    <Thickness x:Key="StackMargin_LeftIndent_Normal_Bottom">16,1,4,4</Thickness>
+
+    <!-- Padding -->
+	<Thickness x:Key="Padding_Narrow">1,1,1,1</Thickness>
+    <Thickness x:Key="Padding_Normal">2,2,2,2</Thickness>
+    <Thickness x:Key="Padding_Wide">4,4,4,4</Thickness>
+
+</ResourceDictionary>
