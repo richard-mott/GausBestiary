@@ -1,0 +1,48 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:GausBestiary.AvaloniaApp.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GausBestiary.AvaloniaApp.Views.MonsterDetails.RewardsView"
+             d:DataContext="{x:Static vm:DesignData.DesignRewards}"
+             FontFamily="Consolas">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceInclude Source="/Assets/GlobalResources.axaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+	<Grid ColumnDefinitions="*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
+		<TextBlock Grid.Row="0"
+                   Margin="{StaticResource StackMargin_Normal_Top}"
+                   Padding="{StaticResource Padding_Normal}"
+                   Text="Steal" />
+        <TextBlock Grid.Row="1"
+                   Margin="{StaticResource StackMargin_LeftIndent_Normal_Bottom}"
+                   Padding="{StaticResource Padding_Normal}"
+                   Text="{Binding Steal}" />
+
+        <TextBlock Grid.Row="2"
+                   Margin="{StaticResource StackMargin_Normal_Top}"
+                   Padding="{StaticResource Padding_Normal}"
+                   Text="Drops" />
+        <TextBlock Grid.Row="3"
+                   Margin="{StaticResource StackMargin_LeftIndent_Normal_Bottom}"
+                   Padding="{StaticResource Padding_Normal}"
+                   Text="{Binding Drops}" />
+
+        <TextBlock Grid.Row="4"
+                   Margin="{StaticResource StackMargin_Normal_Top}"
+                   Padding="{StaticResource Padding_Normal}"
+                   Text="{Binding MetamorphoseTitle}" />
+        <TextBlock Grid.Row="5"
+                   Margin="{StaticResource StackMargin_LeftIndent_Normal_Bottom}"
+                   Padding="{StaticResource Padding_Normal}"
+                   Text="{Binding MetamorphoseItems}" />
+	</Grid>
+
+</UserControl>

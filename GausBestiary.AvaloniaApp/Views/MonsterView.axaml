@@ -23,7 +23,7 @@
 			Margin="{StaticResource Margin_Normal}"
             BorderBrush="{DynamicResource TextControlForeground}">
 
-		<Grid ColumnDefinitions="2*,*,2*,*" RowDefinitions="Auto,Auto,Auto,Auto">
+		<Grid ColumnDefinitions="2*,*,2*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
 
 			<TextBlock Grid.Row="0" Grid.Column="2"
 					   Margin="{StaticResource StackMargin_Normal_Top}"
@@ -59,12 +59,22 @@
 					   Padding="{StaticResource Padding_Normal}"
 					   Text="{Binding Stats.MagicPoints}" />
 
-			<views:StatsView Grid.Row="2" Grid.Column="0"
+			<views:LocationsView Grid.Row="2" Grid.Column="0"
+								 Grid.ColumnSpan="2"
+								 Margin="0,4,0,4"
+								 DataContext="{Binding Locations}" />
+			
+			<views:RewardsView Grid.Row="2" Grid.Column="2"
+							   Grid.ColumnSpan="2"
+							   Margin="0,4,0,4"
+							   DataContext="{Binding Rewards}" />
+
+            <views:StatsView Grid.Row="3" Grid.Column="0"
                              Grid.ColumnSpan="4"
-							 Margin="0,4,0,4"
+                             Margin="0,4,0,4"
                              DataContext="{Binding Stats}" />
 
-			<views:DefensesView Grid.Row="3" Grid.Column="0"
+			<views:DefensesView Grid.Row="4" Grid.Column="0"
 								Grid.ColumnSpan="4"
                                 Margin="0,4,0,4"
 								DataContext="{Binding Defenses}" />

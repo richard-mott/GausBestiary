@@ -15,11 +15,15 @@ public class MonsterViewModel : ViewModelBase
 
     public StatsViewModel Stats { get; }
     public DefensesViewModel Defenses { get; }
+    public LocationsViewModel Locations { get; }
+    public RewardsViewModel Rewards { get; }
 
     public MonsterViewModel(Monster monster)
     {
         this.monster = monster;
         Stats = new StatsViewModel(monster.Stats);
         Defenses = new DefensesViewModel(monster.Defenses);
+        Locations = new LocationsViewModel(monster.Locations);
+        Rewards = new RewardsViewModel(monster.Rewards);
     }
 }

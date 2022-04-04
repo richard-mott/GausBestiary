@@ -1,5 +1,7 @@
-﻿using GausBestiary.AvaloniaApp.ViewModels.MonsterDetails;
+﻿using System.Collections.Generic;
+using GausBestiary.AvaloniaApp.ViewModels.MonsterDetails;
 using GausBestiary.Models;
+using GausBestiary.Models.ChanceEvents;
 using GausBestiary.Models.MonsterDetails;
 
 namespace GausBestiary.AvaloniaApp.ViewModels;
@@ -20,6 +22,28 @@ public static class DesignData
         GbaName = "Design Monster",
         MobileName = "Design Monster",
         PixelRemasterName = "Design Monster",
+
+        Locations = new List<Location>
+        {
+            new Location
+            {
+                World = World.WoB,
+                PrimaryLocation = "Narshe",
+                SecondaryLocations = new List<string> { "Biggs/Wedge/Terra raid", "Terra/Edgar/Banon scenario"}
+            },
+            new Location
+            {
+                World = World.WoB,
+                PrimaryLocation = "South Figaro Overworld",
+                SecondaryLocations = new List<string> { "Biggs/Wedge/Terra raid", "Terra/Edgar/Banon scenario"}
+            },
+            new Location
+            {
+                World = World.WoR,
+                PrimaryLocation = "South Figaro Overworld",
+                SecondaryLocations = new List<string> { "Biggs/Wedge/Terra raid", "Terra/Edgar/Banon scenario"}
+            }
+        },
 
         Stats = new Stats
         {
@@ -51,10 +75,27 @@ public static class DesignData
             OtherImmunity = "Meteor Strike",
             MPKill = true,
             ImpCriticals = false
+        },
+
+        Rewards = new Rewards
+        {
+            Steal = new List<Item>
+            {
+                new Item("Potion", new Chance(7, 8)),
+                new Item("Hi-Potion", new Chance(1, 8))
+            },
+            Drops = new List<Item>
+            {
+                new Item("Ether", new Chance(7, 8)),
+                new Item("Hi-Ether", new Chance(1, 8))
+            },
+            Metamorphose = new Metamorphose("Antidote, Green Cherry, Eye Drops, Gold Needle", new Chance(255, 256))
         }
     };
 
     public static MonsterViewModel DesignMonster { get; } = new MonsterViewModel(Monster);
     public static StatsViewModel DesignStats { get; } = new StatsViewModel(Monster.Stats);
     public static DefensesViewModel DesignDefenses { get; } = new DefensesViewModel(Monster.Defenses);
+    public static LocationsViewModel DesignLocations { get; } = new LocationsViewModel(Monster.Locations);
+    public static RewardsViewModel DesignRewards { get; } = new RewardsViewModel(Monster.Rewards);
 }

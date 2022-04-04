@@ -48,7 +48,7 @@ public class Chance
     /// The chance of the event occurring, expressed as a percentage.
     /// </summary>
     public string Percentage => 
-        $"{Math.Round((double)Success / MaxChance * 100, 2)}%";
+        $"{Math.Round((double)Success / MaxChance * 100, 1)}%";
 
     /// <summary>
     /// The chance of the event occurring, expressed as a string.
@@ -58,10 +58,10 @@ public class Chance
     /// </summary>
     public string Text => 
         success == 0 
-            ? "(Never)" 
+            ? "Never" 
             : success == maxChance 
-                ? "(Always)" 
-                : $"({Success}/{MaxChance})";
+                ? "Always" 
+                : $"{Success}/{MaxChance}";
 
     /// <summary>
     /// Default constructor. Initializes to 0 / 8 chance of event occurring.

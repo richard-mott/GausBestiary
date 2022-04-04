@@ -14,7 +14,11 @@
     </Design.DataContext>
 
 	<Grid>
-		<ItemsControl Width="400" Items="{Binding Monsters}">
-        </ItemsControl>
+		<ScrollViewer Width="700">
+            <ItemsControl 
+                Items="{Binding Monsters}">
+            </ItemsControl>
+        </ScrollViewer>
+        
 	</Grid>
 </Window>
