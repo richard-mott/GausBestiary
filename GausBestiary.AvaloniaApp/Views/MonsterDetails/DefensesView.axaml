@@ -16,107 +16,135 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
-	<Grid ColumnDefinitions="*,*,*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
-        
-        <TextBlock Grid.Row="0" Grid.Column="0"
-                   Grid.ColumnSpan="4"
-                   Margin="{StaticResource StackMargin_Normal_Top}"
-                   Padding="{StaticResource Padding_Normal}"
-                   Text="Elemental Defenses" />
-        <TextBlock Grid.Row="1" Grid.Column="0"
-                   Margin="{StaticResource StackMargin_LeftIndent_Normal_Inner}"
-                   Padding="{StaticResource Padding_Normal}"
-                   Text="Weak:" />
-        <TextBlock Grid.Row="2" Grid.Column="0"
-                   Margin="{StaticResource StackMargin_LeftIndent_Normal_Inner}"
-                   Padding="{StaticResource Padding_Normal}"
-                   Text="Immune:" />
-        <TextBlock Grid.Row="3" Grid.Column="0"
-                   Margin="{StaticResource StackMargin_LeftIndent_Normal_Bottom}"
-                   Padding="{StaticResource Padding_Normal}"
-                   Text="Absorb:" />
+	<Grid ColumnDefinitions="*" RowDefinitions="Auto,Auto,Auto">
+		<Border Grid.Row="0"
+                Margin="{StaticResource StackMargin_Normal_Top}"
+                BorderBrush="{DynamicResource TextControlForeground}"
+                BorderThickness="1">
+			<Grid ColumnDefinitions="*, 3*" RowDefinitions="Auto,Auto,Auto,Auto">
+                <TextBlock Grid.Row="0" Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           Margin="{StaticResource StackMargin_Normal_Top}"
+                           Padding="{StaticResource Padding_Normal}"
+                           Text="Elemental Defenses" />
 
-        <TextBlock Grid.Row="4" Grid.Column="0"
-                   Grid.ColumnSpan="4"
-                   Margin="{StaticResource StackMargin_Normal_Top}"
-                   Padding="{StaticResource Padding_Normal}"
-                   Text="Status Defenses" />
-        <TextBlock Grid.Row="5" Grid.Column="0"
-                   Margin="{StaticResource StackMargin_LeftIndent_Normal_Inner}"
-                   Padding="{StaticResource Padding_Normal}"
-                   Text="Weak:" />
-        <TextBlock Grid.Row="6" Grid.Column="0"
-                   Margin="{StaticResource StackMargin_LeftIndent_Normal_Inner}"
-                   Padding="{StaticResource Padding_Normal}"
-                   Text="Immune:" />
-        <TextBlock Grid.Row="7" Grid.Column="0"
-                   Margin="{StaticResource StackMargin_LeftIndent_Normal_Bottom}"
-                   Padding="{StaticResource Padding_Normal}"
-                   Text="Inherent:" />
+                <TextBlock Grid.Row="1" Grid.Column="0"
+                           Margin="{StaticResource StackMargin_LeftIndent_Normal_Inner}"
+                           Padding="{StaticResource Padding_Normal}"
+                           Text="Weak:" />
+                <TextBlock Grid.Row="1" Grid.Column="1"
+                           Margin="{StaticResource StackMargin_Normal_Inner}"
+                           Padding="{StaticResource Padding_Normal}"
+                           TextWrapping="Wrap"
+                           Text="{Binding ElementalWeakness}" />
 
-        <TextBlock Grid.Row="8" Grid.Column="0"
-                   Margin="{StaticResource StackMargin_Normal_Top}"
-                   Padding="{StaticResource Padding_Normal}"
-                   Text="Other Immunities:" />
-        <TextBlock Grid.Row="9" Grid.Column="0"
-                   Margin="{StaticResource StackMargin_Normal_Bottom}"
-                   Padding="{StaticResource Padding_Normal}"
-                   Text="MP Kill:" />
-        <TextBlock Grid.Row="9" Grid.Column="2"
-                   Margin="{StaticResource StackMargin_Normal_Bottom}"
-                   Padding="{StaticResource Padding_Normal}"
-                   Text="Imp Criticals:" />
+                <TextBlock Grid.Row="2" Grid.Column="0"
+                           Margin="{StaticResource StackMargin_LeftIndent_Normal_Inner}"
+                           Padding="{StaticResource Padding_Normal}"
+                           Text="Immune:" />
+                <TextBlock Grid.Row="2" Grid.Column="1"
+                           Margin="{StaticResource StackMargin_Normal_Inner}"
+                           Padding="{StaticResource Padding_Normal}"
+                           TextWrapping="Wrap"
+                           Text="{Binding ElementalImmunity}" />
 
-		<TextBlock Grid.Row="1" Grid.Column="1"
-                   Grid.ColumnSpan="3"
-                   Margin="{StaticResource StackMargin_Normal_Inner}"
-                   Padding="{StaticResource Padding_Normal}"
-                   TextWrapping="Wrap"
-                   Text="{Binding ElementalWeakness}" />
-		<TextBlock Grid.Row="2" Grid.Column="1"
-                   Grid.ColumnSpan="3"
-                   Margin="{StaticResource StackMargin_Normal_Inner}"
-                   Padding="{StaticResource Padding_Normal}"
-                   TextWrapping="Wrap"
-                   Text="{Binding ElementalImmunity}" />
-		<TextBlock Grid.Row="3" Grid.Column="1"
-                   Grid.ColumnSpan="3"
-                   Margin="{StaticResource StackMargin_Normal_Bottom}"
-                   Padding="{StaticResource Padding_Normal}"
-                   TextWrapping="Wrap"
-                   Text="{Binding ElementalAbsorb}" />
+                <TextBlock Grid.Row="3" Grid.Column="0"
+                           Margin="{StaticResource StackMargin_LeftIndent_Normal_Bottom}"
+                           Padding="{StaticResource Padding_Normal}"
+                           Text="Absorb:" />
+                <TextBlock Grid.Row="3" Grid.Column="1"
+                           Margin="{StaticResource StackMargin_Normal_Bottom}"
+                           Padding="{StaticResource Padding_Normal}"
+                           TextWrapping="Wrap"
+                           Text="{Binding ElementalAbsorb}" />
+			</Grid>
+		</Border>
 
-		<TextBlock Grid.Row="5" Grid.Column="1"
-                   Grid.ColumnSpan="3"
-                   Margin="{StaticResource StackMargin_Normal_Inner}"
-                   Padding="{StaticResource Padding_Normal}"
-                   TextWrapping="Wrap"
-                   Text="{Binding StatusWeakness}" />
-		<TextBlock Grid.Row="6" Grid.Column="1"
-                   Grid.ColumnSpan="3"
-                   Margin="{StaticResource StackMargin_Normal_Inner}"
-                   Padding="{StaticResource Padding_Normal}"
-                   TextWrapping="Wrap"
-                   Text="{Binding StatusImmunity}" />
-		<TextBlock Grid.Row="7" Grid.Column="1"
-                   Grid.ColumnSpan="3"
-                   Margin="{StaticResource StackMargin_Normal_Bottom}"
-                   Padding="{StaticResource Padding_Normal}"
-                   TextWrapping="Wrap"
-                   Text="{Binding InherentStatus}" />
+		<Border Grid.Row="1"
+                Margin="{StaticResource StackMargin_Normal_Inner}"
+                BorderBrush="{DynamicResource TextControlForeground}"
+                BorderThickness="1">
+			<Grid ColumnDefinitions="*, 3*" RowDefinitions="Auto,Auto,Auto,Auto">
+                <TextBlock Grid.Row="0" Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           Margin="{StaticResource StackMargin_Normal_Top}"
+                           Padding="{StaticResource Padding_Normal}"
+                           Text="Status Defenses" />
 
-		<TextBlock Grid.Row="8" Grid.Column="1"
-                   Margin="{StaticResource StackMargin_Normal_Top}"
-                   Padding="{StaticResource Padding_Normal}"
-                   TextWrapping="Wrap"
-                   Text="{Binding OtherImmunity}" />
-		<TextBlock Grid.Row="9" Grid.Column="1"
-                   Margin="{StaticResource StackMargin_Normal_Bottom}"
-                   Padding="{StaticResource Padding_Normal}"
-                   Text="{Binding MPKill}" />
-		<TextBlock Grid.Row="9" Grid.Column="3"
-                   Margin="{StaticResource StackMargin_Normal_Bottom}"
-                   Padding="{StaticResource Padding_Normal}"
-                   Text="{Binding ImpCriticals}" />
+                <TextBlock Grid.Row="1" Grid.Column="0"
+                           Margin="{StaticResource StackMargin_LeftIndent_Normal_Inner}"
+                           Padding="{StaticResource Padding_Normal}"
+                           Text="Vulnerable:" />
+                <TextBlock Grid.Row="1" Grid.Column="1"
+                           Margin="{StaticResource StackMargin_Normal_Inner}"
+                           Padding="{StaticResource Padding_Normal}"
+                           TextWrapping="Wrap"
+                           Text="{Binding StatusVulnerability}" />
+
+                <TextBlock Grid.Row="2" Grid.Column="0"
+                           Margin="{StaticResource StackMargin_LeftIndent_Normal_Inner}"
+                           Padding="{StaticResource Padding_Normal}"
+                           Text="Immune:" />
+                <TextBlock Grid.Row="2" Grid.Column="1"
+                           Margin="{StaticResource StackMargin_Normal_Inner}"
+                           Padding="{StaticResource Padding_Normal}"
+                           TextWrapping="Wrap"
+                           Text="{Binding StatusImmunity}" />
+                
+                <TextBlock Grid.Row="3" Grid.Column="0"
+                           Margin="{StaticResource StackMargin_LeftIndent_Normal_Bottom}"
+                           Padding="{StaticResource Padding_Normal}"
+                           Text="Inherent:" />
+                <TextBlock Grid.Row="3" Grid.Column="1"
+                           Margin="{StaticResource StackMargin_Normal_Bottom}"
+                           Padding="{StaticResource Padding_Normal}"
+                           TextWrapping="Wrap"
+                           Text="{Binding InherentStatus}" />
+            </Grid>
+        </Border>
+
+		<Border Grid.Row="2"
+                Margin="{StaticResource StackMargin_Normal_Bottom}"
+                BorderBrush="{DynamicResource TextControlForeground}"
+                BorderThickness="1">
+			<Grid ColumnDefinitions="*, 3*" RowDefinitions="Auto,Auto,Auto,Auto">
+                <TextBlock Grid.Row="0" Grid.Column="0"
+                           Margin="{StaticResource StackMargin_Normal_Top}"
+                           Padding="{StaticResource Padding_Normal}"
+                           Text="Other Immunities:" />
+                <TextBlock Grid.Row="0" Grid.Column="1"
+                           Margin="{StaticResource StackMargin_Normal_Top}"
+                           Padding="{StaticResource Padding_Normal}"
+                           TextWrapping="Wrap"
+                           Text="{Binding OtherImmunity}" />
+
+                <TextBlock Grid.Row="1" Grid.Column="0"
+                           Margin="{StaticResource StackMargin_Normal_Bottom}"
+                           Padding="{StaticResource Padding_Normal}"
+                           Text="MP Kill:" />
+                <TextBlock Grid.Row="1" Grid.Column="1"
+                           Margin="{StaticResource StackMargin_Normal_Bottom}"
+                           Padding="{StaticResource Padding_Normal}"
+                           Text="{Binding MPKill}" />
+
+				<TextBlock Grid.Row="2" Grid.Column="0"
+                           Margin="{StaticResource StackMargin_Normal_Bottom}"
+                           Padding="{StaticResource Padding_Normal}"
+                           Text="Imp Criticals:" />
+                <TextBlock Grid.Row="2" Grid.Column="1"
+                           Margin="{StaticResource StackMargin_Normal_Bottom}"
+                           Padding="{StaticResource Padding_Normal}"
+                           Text="{Binding ImpCriticals}" />
+            </Grid>
+        </Border>
+
+                
+
+		
+		
+		
+		
+
+		
     </Grid>
 </UserControl>

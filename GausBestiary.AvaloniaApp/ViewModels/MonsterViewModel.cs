@@ -17,6 +17,7 @@ public class MonsterViewModel : ViewModelBase
     public DefensesViewModel Defenses { get; }
     public LocationsViewModel Locations { get; }
     public RewardsViewModel Rewards { get; }
+    public SkillsViewModel Skills { get; }
 
     public MonsterViewModel(Monster monster)
     {
@@ -25,5 +26,6 @@ public class MonsterViewModel : ViewModelBase
         Defenses = new DefensesViewModel(monster.Defenses);
         Locations = new LocationsViewModel(monster.Locations);
         Rewards = new RewardsViewModel(monster.Rewards);
+        Skills = new SkillsViewModel(monster.Skills);
     }
 }

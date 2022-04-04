@@ -3,6 +3,7 @@ using GausBestiary.AvaloniaApp.ViewModels.MonsterDetails;
 using GausBestiary.Models;
 using GausBestiary.Models.ChanceEvents;
 using GausBestiary.Models.MonsterDetails;
+using GausBestiary.Models.RageSkills;
 
 namespace GausBestiary.AvaloniaApp.ViewModels;
 
@@ -90,6 +91,20 @@ public static class DesignData
                 new Item("Hi-Ether", new Chance(1, 8))
             },
             Metamorphose = new Metamorphose("Antidote, Green Cherry, Eye Drops, Gold Needle", new Chance(255, 256))
+        },
+
+        Skills = new Skills
+        {
+            SpecialAttack = "Critical",
+            Sketch = new List<Sketch>
+            {
+                new Sketch("Attack", new Chance(3, 4)),
+                new Sketch("Critical", new Chance(1, 4))
+            },
+            Rage = new RageSkill
+            {
+                PixelRemasterName = "Critical"
+            }
         }
     };
 
@@ -98,4 +113,5 @@ public static class DesignData
     public static DefensesViewModel DesignDefenses { get; } = new DefensesViewModel(Monster.Defenses);
     public static LocationsViewModel DesignLocations { get; } = new LocationsViewModel(Monster.Locations);
     public static RewardsViewModel DesignRewards { get; } = new RewardsViewModel(Monster.Rewards);
+    public static SkillsViewModel DesignSkills { get; } = new SkillsViewModel(Monster.Skills);
 }
